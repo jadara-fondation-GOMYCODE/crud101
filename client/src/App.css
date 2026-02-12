@@ -1,0 +1,112 @@
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.app h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 140px;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-actions button:first-child {
+  background-color: #646cff;
+  color: white;
+}
+
+.form-actions button:first-child:hover {
+  background-color: #535bf2;
+}
+
+.error {
+  color: #e57373;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #444;
+}
+
+.table th {
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.table td button {
+  margin-right: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.table td button.delete {
+  color: #e57373;
+}
+
+.table td button.delete:hover {
+  border-color: #e57373;
+  background: rgba(229, 115, 115, 0.15);
+}
+
+.empty {
+  color: #888;
+  margin-top: 1rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .form input {
+    border-color: #ccc;
+  }
+  .form input:focus {
+    border-color: #535bf2;
+  }
+  .table th,
+  .table td {
+    border-bottom-color: #ddd;
+  }
+  .table th {
+    background: #f0f0f0;
+  }
+  .table tbody tr:hover {
+    background: #f8f8f8;
+  }
+}
