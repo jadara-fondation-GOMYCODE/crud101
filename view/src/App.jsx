@@ -2,7 +2,6 @@ import { useState } from 'react'
 import './App.css'
 import axios from 'axios'
 function App() {
-
   const[formData, setFormData] = useState({
     username: '',
     password: ''
@@ -15,18 +14,15 @@ function App() {
   const handleSubmit = async (e) =>{
     e.preventDefault()
     try {
-      const res = await axios.post("http://localhost:5000/user",formData)
-      
+      const res = await axios.post("http://localhost:5000/user",formData)      
       console.log('Server response:', res.data);
       alert('Data posted successfully!');
-
       // Reset form
-      setFormData({ username: '', email: '' });
+      setFormData({ username: '', password:'' });
     } catch (error) {
       console.error(error)
     }
   }
-
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -47,5 +43,4 @@ function App() {
     </>
   )
 }
-
 export default App
